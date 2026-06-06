@@ -161,6 +161,10 @@ body {
   display: flex; align-items: center; gap: 12px;
 }
 .nav-cta .btn-primary { padding: 10px 20px; font-size: 0.85rem; }
+.nav-cta .btn-secondary { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.45); }
+.nav-cta .btn-secondary:hover { background: rgba(255,255,255,0.15); color: white; border-color: transparent; }
+.navbar.scrolled .nav-cta .btn-secondary { color: var(--purple); border-color: var(--purple); }
+.navbar.scrolled .nav-cta .btn-secondary:hover { background: var(--purple); color: white; }
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
   cursor: pointer; padding: 4px;
@@ -915,7 +919,7 @@ footer {
   font-size: 0.95rem;
 }
 .cd-info strong { display: block; font-size: 0.82rem; opacity: 0.6; margin-bottom: 2px; }
-.cd-info span { font-size: 0.92rem; }
+.cd-info span { font-size: 0.92rem; display: block; }
 .hours-box {
   margin-top: 28px; background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 20px;
