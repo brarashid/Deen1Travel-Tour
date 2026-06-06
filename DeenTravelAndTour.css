@@ -123,22 +123,20 @@ body {
 }
 .logo-icon {
   width: 44px; height: 44px;
-  background: linear-gradient(135deg, var(--purple), var(--purple-dark));
   border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem; color: white;
+  overflow: hidden;
+  flex-shrink: 0;
   box-shadow: 0 4px 16px rgba(90,0,200,0.3);
+}
+.logo-icon img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
 }
 .logo-text { line-height: 1.1; }
 .logo-name {
-  font-size: 1.1rem; font-weight: 800; color: var(--text-dark);
-  letter-spacing: -0.02em;
+  font-size: 0.95rem; font-weight: 900; color: var(--text-dark);
+  letter-spacing: 0.04em; text-transform: uppercase;
 }
 .logo-name span { color: var(--purple); }
-.logo-tag {
-  font-size: 0.65rem; color: var(--orange); font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase;
-}
 .nav-links {
   display: flex; align-items: center; gap: 4px;
   list-style: none;
@@ -1402,3 +1400,71 @@ footer {
   .hero-stats { flex-wrap: wrap; }
   .hero-stat-sep { display: none; }
 }
+
+/* =====================================================
+   Font Awesome Icon Colors & Sizing
+   ===================================================== */
+/* Service card icons */
+.svc-purple .service-icon i { color: var(--purple); }
+.svc-orange .service-icon i { color: var(--orange); }
+.svc-blue   .service-icon i { color: #2563EB; }
+.svc-teal   .service-icon i { color: #0D9488; }
+.svc-rose   .service-icon i { color: #BE185D; }
+.svc-green  .service-icon i { color: #15803D; }
+.service-card:hover .service-icon i { color: white; }
+
+/* Services full-page visuals */
+.sf-visual.purple i { color: var(--purple); }
+.sf-visual.orange i { color: var(--orange); }
+.sf-visual.blue   i { color: #1D4ED8; }
+.sf-visual.green  i { color: #15803D; }
+
+/* Blog thumbnails */
+.blog-thumb i     { color: var(--purple); }
+.blog-thumb.t2 i  { color: var(--orange); }
+.blog-thumb.t3 i  { color: #15803D; }
+.blog-thumb.t4 i  { color: #1D4ED8; }
+.blog-thumb.t5 i  { color: #BE185D; }
+
+/* Country flags */
+.country-flag i { color: var(--purple); font-size: 3rem; }
+
+/* Work service icons */
+.work-service-card .ws-icon i { font-size: 1.3rem; color: var(--purple); }
+
+/* Team avatars */
+.team-avatar i { font-size: 4rem; color: rgba(255,255,255,0.7); }
+
+/* Testimonial stars */
+.testimonial-stars i { color: #FFB800; font-size: 0.88rem; margin: 0 1px; }
+
+/* Core values */
+.value-icon i { color: var(--purple); }
+
+/* Why float star */
+.why-float-icon i { color: white; }
+
+/* Hero package card icon */
+.hero-pkg-icon i { color: rgba(255,255,255,0.9); }
+.hero-pkg-label i { color: #FFD580; margin-right: 4px; }
+
+/* About page big icon */
+.story-image-block .big-icon {
+  font-size: 8rem; opacity: 0.2; color: white;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Mission/Vision decorative background icon */
+.mv-card .big-bg {
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Umrah kaaba background */
+.umrah-hero .kaaba-bg { color: white; }
+
+/* Umrah feature card icons */
+.umrah-feature-icon { font-size: 2.5rem; margin-bottom: 12px; color: var(--purple); }
+
+/* Footer heart */
+.footer-bottom i.fa-heart { color: #FF4B6E; margin: 0 4px; }
