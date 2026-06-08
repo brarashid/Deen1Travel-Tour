@@ -821,6 +821,46 @@ footer {
 .umrah-hero h1 { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 900; color: white; margin-bottom: 16px; }
 .umrah-hero .accent { color: var(--orange-light); }
 .umrah-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto 32px; }
+/* Holy Sites Section */
+.holy-sites { padding: 80px 0; background: white; }
+.holy-sites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+}
+.holy-card--featured { grid-column: 1 / 3; display: flex; align-items: flex-start; gap: 24px; }
+.holy-card {
+  background: var(--bg-light); border: 1px solid var(--border);
+  border-radius: 20px; padding: 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.holy-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(90,0,200,0.1); }
+.holy-card--featured { background: linear-gradient(135deg, #12003a, #3a0080); border-color: transparent; color: white; }
+.holy-card--featured h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; color: white; }
+.holy-card--featured p { font-size: 0.88rem; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 16px; }
+.holy-card-icon {
+  width: 60px; height: 60px; border-radius: 16px; flex-shrink: 0;
+  background: rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; color: white;
+}
+.holy-card-icon--blue  { background: rgba(37,99,235,0.1); color: #2563EB; }
+.holy-card-icon--gold  { background: rgba(217,119,6,0.1); color: #D97706; }
+.holy-card-icon--green { background: rgba(22,163,74,0.1); color: #16A34A; }
+.holy-card-icon--teal  { background: rgba(13,148,136,0.1); color: #0D9488; }
+.holy-card-icon--orange{ background: rgba(255,122,0,0.1); color: var(--orange); }
+.holy-card h4 { font-size: 0.98rem; font-weight: 700; margin: 14px 0 8px; color: var(--text-dark); }
+.holy-card p  { font-size: 0.83rem; color: var(--text-mid); line-height: 1.65; margin-bottom: 14px; }
+.holy-card-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.03em;
+  color: var(--purple); background: rgba(90,0,200,0.07);
+  padding: 4px 10px; border-radius: 20px;
+}
+.holy-card--featured .holy-card-badge { color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.12); }
+.holy-card-body { flex: 1; }
+
 .booking-steps { padding: 80px 0; background: var(--bg-light); }
 .steps-track {
   display: flex; gap: 0; position: relative; margin-top: 48px;
@@ -1406,6 +1446,14 @@ footer {
   .stats-section .stats-grid { gap: 12px; }
   .hero-stats { flex-wrap: wrap; }
   .hero-stat-sep { display: none; }
+}
+@media (max-width: 768px) {
+  .holy-sites-grid { grid-template-columns: 1fr 1fr; }
+  .holy-card--featured { grid-column: 1 / 3; }
+}
+@media (max-width: 480px) {
+  .holy-sites-grid { grid-template-columns: 1fr; }
+  .holy-card--featured { grid-column: 1; flex-direction: column; }
 }
 
 /* =====================================================
